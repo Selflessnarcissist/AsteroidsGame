@@ -7,6 +7,7 @@ boolean keyup = false;
 boolean keyleft = false;
 boolean keyright = false;
 boolean keyh = false;
+ArrayList <Asteroids> astarray = new ArrayList <Asteroids>();
 public void setup() 
 {
   size(400,400);
@@ -18,7 +19,9 @@ asteroid[i] = new Asteroids();
 asteroid[i].setDirectionX((double)Math.random()*2-1);
   asteroid[i].setDirectionY((double)Math.random()*2-1);
   }
-  
+  for (int i = 0; i < 20; i++ ) {
+  astarray.add(0, new Asteroids());
+  }
 }
 public void draw() 
 {
@@ -30,8 +33,14 @@ public void draw()
   s.show();
   s.move();
   for (int i = 0; i < 20; i++ ) {
+    if (asteroid[i].getShown() == true) {
   asteroid[i].show();
+    }
   asteroid[i].move();
+  if (asteroid[i].getX()-s.getX()<=10 && asteroid[i].getY()-s.getY()<=10 && asteroid[i].getX()-s.getX()>=-10 && asteroid[i].getY()-s.getY()>=-10) {
+  asteroid[i].setShown(false);
+  
+  }
   }
   
   

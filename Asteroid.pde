@@ -11,6 +11,9 @@ class Asteroids extends Floater
   public void setPointDirection(int degrees){myPointDirection = degrees;}   
   public double getPointDirection(){return myPointDirection;}
   private int rotation;
+  private boolean shown = true;
+  public void setShown(boolean x) {shown = x;}
+  public boolean getShown() {return shown;}
   
   public Asteroids () {
   corners = 5;  //the number of corners, a triangular floater has 3   
@@ -18,9 +21,9 @@ class Asteroids extends Floater
   int[] allY = {8,-8,-8,8,8};
   xCorners = allX;
   yCorners = allY;
-  rotation = (int)(Math.random()*360-180);
-  myColor = 255;   
-  myCenterX = 200; myCenterY = 200; //holds center coordinates   
+  rotation = (int)(Math.random()*180-90);
+  myColor = 120;   
+  myCenterX = (int)(Math.random()*400); myCenterY = (int)(Math.random()*400); //holds center coordinates   
   myDirectionX = 0; myDirectionY = 0; //holds x and y coordinates of the vector for direction of travel   
   myPointDirection = 0; //holds current direction the ship is pointing in degrees
   }
@@ -28,7 +31,8 @@ class Asteroids extends Floater
   public void move ()   //move the floater in the current direction of travel
   {      
     turn(rotation);
-    super.move();   
+    super.move();
+    
   }
   
 }
