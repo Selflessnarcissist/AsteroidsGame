@@ -1,4 +1,4 @@
-class Asteroids extends Floater  
+class Asteroidsv2 extends Floater  
 {   
   public void setX(int x){myCenterX = x;}  
   public int getX() {return (int)myCenterX;}  
@@ -15,10 +15,10 @@ class Asteroids extends Floater
   public void setShown(boolean x) {shown = x;}
   public boolean getShown() {return shown;}
   
-  public Asteroids () {
+  public Asteroidsv2 () {
   corners = 6;  //the number of corners, a triangular floater has 3   
-  int[] allX = {12,0,-12,-12,0,12};
-  int[] allY = {0,12,6,-6,-12,0};
+  int[] allX = {8,0,-8,-8,0,8};
+  int[] allY = {0,8,4,-4,-8,0};
   xCorners = allX;
   yCorners = allY;
   rotation = (int)(Math.random()*45-22);
