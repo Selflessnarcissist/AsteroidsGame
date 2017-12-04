@@ -56,7 +56,7 @@ public void draw()
   //collision
   if (astarray.get(i).getX()-s.getX()<=10 && astarray.get(i).getY()-s.getY()<=10 && astarray.get(i).getX()-s.getX()>=-10 && astarray.get(i).getY()-s.getY()>=-10 && astarray.get(i).getShown() == true) {
   astarray.get(i).setShown(false);
-  astarray2.add(0, new Asteroidsv2());
+  /*astarray2.add(0, new Asteroidsv2());
   astarray2.get(0).setShown(true);
   astarray2.get(0).setDirectionX((double)Math.random()*2-1);
   astarray2.get(0).setDirectionY((double)Math.random()*2-1);
@@ -77,6 +77,7 @@ public void draw()
   astarray2.get(0).setX(astarray.get(i).getX());
   astarray2.get(0).setY(astarray.get(i).getY());
   astnum+=3;
+  */
   }
   }
   
