@@ -9,9 +9,9 @@ class Stars //note that this class does NOT extend Floater
     xpos = (float)(Math.random()*400);
     ypos = (float)(Math.random()*400);
     
-    a = (int)(Math.random()*150);
+    a = (int)((Math.random()*75)+(Math.random()*75));
     b = (int)(Math.random()*150);
-    c = (int)(Math.random()*150);
+    c = (int)((Math.random()*225)-(Math.random()*75));
   }
   
   public void show() {
